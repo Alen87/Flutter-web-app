@@ -51,8 +51,24 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text("Welcome to Admin Web Portal"),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.amber, Colors.cyan],
+              begin: FractionalOffset(0, 0),
+              end: FractionalOffset(1, 0),
+              stops: [0, 1],
+              tileMode: TileMode.clamp,
+            ),
+          ),
+        ),
+        title: const Text(
+          "Admin Web Portal",
+          style: TextStyle(fontSize: 20,letterSpacing: 3,color: Colors.white),
+        ),
+        centerTitle: true,
       ),
       body: Center(
           child: Column(
@@ -63,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
               timeText + "\n" + dateText,
               style: const TextStyle(
                   fontSize: 20,
-                  color: Colors.black,
+                  color: Colors.white,
                   letterSpacing: 3,
                   fontWeight: FontWeight.bold),
             ),
