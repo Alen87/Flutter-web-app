@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodpanda_admin_web_portal/authentication/login_screen.dart';
 import 'package:foodpanda_admin_web_portal/main_screen/home_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home:const HomeScreen(),
+      home:const LoginScreen(),
     );
   }
 }
