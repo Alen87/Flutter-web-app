@@ -66,13 +66,13 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         title: const Text(
           "Admin Web Portal",
-          style: TextStyle(fontSize: 20,letterSpacing: 3,color: Colors.white),
+          style: TextStyle(fontSize: 20, letterSpacing: 3, color: Colors.white),
         ),
         centerTitle: true,
       ),
       body: Center(
-          child: Column(
-        children: [
+        child:
+            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Text(
@@ -84,8 +84,164 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold),
             ),
           ),
-        ],
-      )),
+          // user activate and block accounts button ui
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              //active
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.person_add,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  "Activate User".toUpperCase() +
+                      "\n" +
+                      "Accounts".toUpperCase(),
+                  style: const TextStyle(
+                      fontSize: 16, color: Colors.white, letterSpacing: 3),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(40),
+                  backgroundColor: Colors.amber,
+                ),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.block_flipped,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  "Block User".toUpperCase() + " \n" + "Accounts".toUpperCase(),
+                  style: const TextStyle(
+                      fontSize: 16, color: Colors.white, letterSpacing: 3),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(40),
+                  backgroundColor: Colors.cyan,
+                ),
+              ),
+      //block
+            ],
+          ),
+
+          // sellers activate and block accounts button ui
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            //active
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.person_add,
+                color: Colors.white,
+              ),
+              label: Text(
+                "Activate Sellers".toUpperCase() +
+                    "\n" +
+                    "Accounts".toUpperCase(),
+                style: const TextStyle(
+                    fontSize: 16, color: Colors.white, letterSpacing: 3),
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(40),
+                backgroundColor: Colors.cyan,
+              ),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.block_flipped,
+                color: Colors.white,
+              ),
+              label: Text(
+                "Block Sellers".toUpperCase() +
+                    " \n" +
+                    "Accounts".toUpperCase(),
+                style: const TextStyle(
+                    fontSize: 16, color: Colors.white, letterSpacing: 3),
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(40),
+                backgroundColor: Colors.amber,
+              ),
+            ),
+            //block
+
+            // riders activate and block accounts button ui
+          ]),
+          //riders active and block account button ui
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              //active
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.person_add,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  "Activate Riders".toUpperCase() +
+                      "\n" +
+                      "Accounts".toUpperCase(),
+                  style: const TextStyle(
+                      fontSize: 16, color: Colors.white, letterSpacing: 3),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(40),
+                  backgroundColor: Colors.amber,
+                ),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.block_flipped,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  "Block Raiders".toUpperCase() +
+                      " \n" +
+                      "Accounts".toUpperCase(),
+                  style: const TextStyle(
+                      fontSize: 16, color: Colors.white, letterSpacing: 3),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(40),
+                  backgroundColor: Colors.cyan,
+                ),
+              ),
+              //block
+            ],
+          ),
+                 //logout button
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  "Logout".toUpperCase(),
+                  style: const TextStyle(
+                      fontSize: 16, color: Colors.white, letterSpacing: 3),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(40),
+                  backgroundColor: Colors.cyan,
+                ),
+              ),
+        ],),
+      ),
     );
   }
 }
